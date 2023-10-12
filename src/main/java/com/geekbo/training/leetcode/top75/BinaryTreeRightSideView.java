@@ -12,6 +12,7 @@ import java.util.Queue;
  * 在每层遍历时，我们维护一个指向最右节点的指针（rightmost），并将其添加到结果列表中。
  * 时间复杂度：O(N)，其中 N 是二叉树中的节点数量，因为我们需要访问每个节点一次。
  * 空间复杂度：O(M)，其中 M 是二叉树中一层的最大节点数，即队列的大小。
+ *
  */
 public class BinaryTreeRightSideView {
 
