@@ -24,6 +24,56 @@ import java.util.Map;
  * Output: true
  */
 public class RansomNote {
+
+
+    /**
+     * 进一步优化算法，
+     * <p>
+     * 提前终止： 在检查 ransomNote 字符频率时，如果发现某个字符在 magazine 中的频率小于 ransomNote 中的频率，可以立即返回 false，而不必继续遍历。
+     * 这可能提前终止算法。
+     * <p>
+     * 更快的字符频率计算： 如果字符集的大小不是很大，可以考虑使用数组而不是哈希映射来计算字符频率。
+     * 这通常比哈希映射更快。
+     * <p>
+     * 字符集大小优化： 如果字符集大小很小（例如，只包含小写字母 a-z），可以使用一个长度为 26 的整数数组来计算频率，而不是一个哈希映射。
+     *
+     * @param ransomNote
+     * @param magazine
+     * @return
+     */
+    public boolean canConstruct(String ransomNote, String magazine) {
+        int[] charCount = new int[26]; // 假设字符集是小写字母 a-z
+
+
+        /**
+         *
+         * c - 'a' 表示字符 c 距离小写字母 'a' 的偏移量。这是一种常见的技巧，通常用于将小写字母映射到整数索引，以便在数组或其他数据结构中存储字符频率。
+         *
+         * 具体来说，偏移量 c - 'a' 将小写字母 'a' 映射到索引 0，'b' 映射到索引 1，依此类推，直到 'z' 映射到索引 25。这使得我们可以使用一个长度为 26 的整数数组（通常称为计数数组）来记录每个小写字母的频率，因为数组的索引范围是从 0 到 25，正好对应了小写字母 'a' 到 'z'。
+         *
+         * 例如，如果 c 是字符 'c'，则 c - 'a' 的结果是 2，因此我们会在数组的第 2 个位置增加频率计数。
+         *
+         * 这是一个便于处理小写字母频率计算的常见技巧，通常用于解决像字符频率计算这样的问题。
+         *
+         */
+
+        // 计算 magazine 中每个字符的频率
+        for (char c : magazine.toCharArray()) {
+            charCount[c - 'a']++;
+        }
+
+        // 检查 ransomNote 中的字符是否可以从 magazine 构建
+        for (char c : ransomNote.toCharArray()) {
+            if (charCount[c - 'a'] == 0) {
+                return false;
+            }
+            charCount[c - 'a']--;
+        }
+
+        return true;
+    }
+
+
     /**
      * 解题思路：
      * 我们可以使用两个哈希映射（HashMap）分别记录 ransomNote 和 magazine 中字符的频率。
@@ -38,7 +88,7 @@ public class RansomNote {
      * - 空间复杂度：空间复杂度主要由两个哈希映射决定，它们分别存储字符的频率。因此，
      * 空间复杂度为 O(k)。
      */
-    public boolean canConstruct(String ransomNote, String magazine) {
+    public boolean canConstructOfHash(String ransomNote, String magazine) {
         // 创建哈希映射以计算字符的频率
         Map<Character, Integer> ransomNoteMap = new HashMap<>();
         Map<Character, Integer> magazineMap = new HashMap<>();
