@@ -2,7 +2,7 @@ package com.geekbo.training.leetcode.base;
 
 // 定义二叉树节点
 public class TreeNode {
-    int val;
+    public int val;
     public TreeNode left;
     public TreeNode right;
 
