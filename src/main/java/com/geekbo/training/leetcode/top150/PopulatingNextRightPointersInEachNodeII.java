@@ -3,13 +3,13 @@ package com.geekbo.training.leetcode.top150;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Node2 {
+class Node3 {
     int val;
-    Node2 left;
-    Node2 right;
-    Node2 next;
+    Node3 left;
+    Node3 right;
+    Node3 next;
 
-    Node2(int val) {
+    Node3(int val) {
         this.val = val;
     }
 }
@@ -66,14 +66,14 @@ public class PopulatingNextRightPointersInEachNodeII {
      * @param root
      * @return
      */
-    public static Node2 connect(Node2 root) {
+    public static Node3 connect(Node3 root) {
         if (root == null) {
             return null;
         }
 
-        Node2 dummy = new Node2(0);
-        Node2 prev = dummy;
-        Node2 curr = root;
+        Node3 dummy = new Node3(0);
+        Node3 prev = dummy;
+        Node3 curr = root;
 
         while (curr != null) {
             if (curr.left != null) {
@@ -111,20 +111,20 @@ public class PopulatingNextRightPointersInEachNodeII {
      * @param root
      * @return
      */
-    public static Node2 connectBFS(Node2 root) {
+    public static Node3 connectBFS(Node3 root) {
         if (root == null) {
             return null;
         }
 
-        Queue<Node2> queue = new LinkedList<>();
+        Queue<Node3> queue = new LinkedList<>();
         queue.offer(root);
 
         while (!queue.isEmpty()) {
             int size = queue.size();
-            Node2 prev = null;
+            Node3 prev = null;
 
             for (int i = 0; i < size; i++) {
-                Node2 curr = queue.poll();
+                Node3 curr = queue.poll();
 
                 if (prev != null) {
                     prev.next = curr;
@@ -147,21 +147,21 @@ public class PopulatingNextRightPointersInEachNodeII {
 
     public static void main(String[] args) {
         // 构建测试用例
-        Node2 root = new Node2(1);
-        root.left = new Node2(2);
-        root.right = new Node2(3);
-        root.left.left = new Node2(4);
-        root.left.right = new Node2(5);
-        root.right.right = new Node2(7);
+        Node3 root = new Node3(1);
+        root.left = new Node3(2);
+        root.right = new Node3(3);
+        root.left.left = new Node3(4);
+        root.left.right = new Node3(5);
+        root.right.right = new Node3(7);
 
         // 调用方法
-        Node2 result = connect(root);
+        Node3 result = connect(root);
 
         // 打印结果
         printTree(result);
     }
 
-    private static void printTree(Node2 root) {
+    private static void printTree(Node3 root) {
         if (root == null) {
             System.out.println("#");
             return;
