@@ -26,6 +26,8 @@ import java.util.*;
  * Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]
  * Output: 0
  * Explanation: The endWord "cog" is not in wordList, therefore there is no valid transformation sequence.
+ *
+ * todo:加深理解
  */
 public class WordTransformation {
     /**
