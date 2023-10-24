@@ -1,13 +1,24 @@
 package com.geekbo.training.leetcode.top150;
 
+import java.util.HashMap;
+import java.util.Map;
+
 class TrieNode {
     TrieNode[] children;
     boolean isEnd;
 
+    Map<Character, TrieNode> childrenMap;
+    boolean isWord;
+
     TrieNode() {
         children = new TrieNode[26];
+        childrenMap = new HashMap<>();
+        isWord = false;
         isEnd = false;
     }
+
+
+
 }
 public class LongestCommonPrefix {
 
