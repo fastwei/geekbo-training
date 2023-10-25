@@ -31,6 +31,8 @@ import java.util.PriorityQueue;
  * Input: nums1 = [1,2], nums2 = [3], k = 3
  * Output: [[1,3],[2,3]]
  * Explanation: All possible pairs are returned from the sequence: [1,3],[2,3]
+ *
+ * todo:加深理解
  */
 public class KSmallestPairs {
     /**

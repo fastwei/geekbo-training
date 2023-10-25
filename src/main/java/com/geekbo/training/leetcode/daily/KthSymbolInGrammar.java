@@ -33,6 +33,8 @@ package com.geekbo.training.leetcode.daily;
  * <p>
  * 1 <= n <= 30
  * 1 <= k <= 2n - 1
+ *
+ * todo:加深理解
  */
 public class KthSymbolInGrammar {
     /**
