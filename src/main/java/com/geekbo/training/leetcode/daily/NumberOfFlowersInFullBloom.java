@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.other;
+package com.geekbo.training.leetcode.daily;
 
 import java.util.Arrays;
 
