@@ -1,26 +1,25 @@
 package com.geekbo.training.leetcode.top150.hard;
 
 /**
- *
  * Given two sorted arrays nums1 and nums2 of size m and n respectively,
  * return the median of the two sorted arrays.
- *
+ * <p>
  * The overall run time complexity should be O(log (m+n)).
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: nums1 = [1,3], nums2 = [2]
  * Output: 2.00000
  * Explanation: merged array = [1,2,3] and median is 2.
  * Example 2:
- *
+ * <p>
  * Input: nums1 = [1,2], nums2 = [3,4]
  * Output: 2.50000
  * Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
- *
- *
+ * <p>
+ * <p>
  * todo:加深理解
  */
 public class MedianOfTwoSortedArrays {
@@ -38,7 +37,9 @@ public class MedianOfTwoSortedArrays {
      * 在每一次循环中，计算第一个数组的划分点i和第二个数组的划分点j，根据划分点的位置来判断是否满足条件。
      * 如果第一个数组的划分点i小于右边界right，且第二个数组的划分点j-1的值大于第一个数组的划分点i，说明划分点在第一个数组的右边，需要将左边界left右移。
      * 如果第一个数组的划分点i大于左边界left，且第一个数组的划分点i-1的值大于第二个数组的划分点j，说明划分点在第一个数组的左边，需要将右边界right左移。
-     * 如果划分点满足条件，则找到了划分点位置，根据划分点位置将数组分为左右两部分。根据奇偶性来计算中位数：
+     * 如果划分点满足条件，则找到了划分点位置，根据划分点位置将数组分为左右两部分。
+     * <p>
+     * 根据奇偶性来计算中位数：
      * 如果数组的总长度为奇数，返回左边部分的最大值；
      * 如果数组的总长度为偶数，返回左边部分的最大值和右边部分的最小值的平均值。
      * 如果没有找到划分点，返回0.0作为默认值。

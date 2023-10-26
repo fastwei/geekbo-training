@@ -37,6 +37,7 @@ import java.util.PriorityQueue;
  * Input: k = 3, w = 0, profits = [1,2,3], capital = [0,1,2]
  * Output: 6
  *
+ * todo:加深理解，优化
  * 对于性能优化，可以考虑以下几点：
  *
  * 使用数组代替堆：堆是一个有序的数据结构，但在本问题中，我们只需要找到最大的k个项目。
