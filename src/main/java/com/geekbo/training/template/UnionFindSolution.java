@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.template;
+package com.geekbo.training.template;
 
 public class UnionFindSolution {
     // 定义并查集数据结构

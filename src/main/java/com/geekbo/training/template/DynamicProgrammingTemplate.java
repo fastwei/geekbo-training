@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.template;
+package com.geekbo.training.template;
 
 public class DynamicProgrammingTemplate {
 

@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.template;
+package com.geekbo.training.template;
 
 /**
  * binarySearch方法接收一个已排序的整数数组nums和目标值target作为输入。

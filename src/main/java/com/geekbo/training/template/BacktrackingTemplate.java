@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.template;
+package com.geekbo.training.template;
 
 import java.util.ArrayList;
 import java.util.List;

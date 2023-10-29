@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.template;
+package com.geekbo.training.template;
 
 /**
  * 我们定义了一个SearchTemplate类，其中包含一个通用的搜索算法模板示例。
