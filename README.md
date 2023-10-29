@@ -11,7 +11,7 @@
 - mergesort
 - topologicalsort
 - othersort
-- 
+
 # Crack Leetcode training
 
 - leetcode ace75
