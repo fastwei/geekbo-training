@@ -42,15 +42,15 @@ import com.geekbo.training.leetcode.base.TreeNode;
 public class CountNodesEqualToAverageSubtree {
     /**
      * 解题思路：
-     * <p>
+     *
      * 我们使用深度优先搜索（DFS）来遍历二叉树的每个节点。
      * 对于每个节点，我们递归地计算其左子树和右子树的节点数和节点值之和。
      * 然后，我们将当前节点的值与子树节点值之和的平均值进行比较。
      * 如果当前节点的值等于平均值，我们将计数器加1。
      * 最后，我们返回子树节点数和节点值之和以供父节点使用。
-     * <p>
+     *
      * 算法复杂度分析：
-     * <p>
+     *
      * 时间复杂度：算法的时间复杂度为O(N)，其中N是二叉树中的节点数。我们需要遍历每个节点一次。
      * 空间复杂度：算法的空间复杂度为O(H)，其中H是二叉树的高度。在最坏情况下，二叉树是一个链表，空间复杂度为O(N)。
      *
@@ -65,17 +65,17 @@ public class CountNodesEqualToAverageSubtree {
 
     private static int[] dfs(TreeNode node, int[] count) {
         if (node == null) {
-            return new int[]{0, 0}; // 返回子树节点数和节点值之和
+            return new int[]{0, 0};
         }
 
         int[] left = dfs(node.left, count);
         int[] right = dfs(node.right, count);
 
-        int totalNodes = left[0] + right[0] + 1; // 当前子树的节点数
-        int totalSum = left[1] + right[1] + node.val; // 当前子树的节点值之和
+        int totalNodes = left[0] + right[0] + 1;
+        int totalSum = left[1] + right[1] + node.val;
 
-        if (node.val * totalNodes == totalSum) {
-            count[0]++; // 节点值等于子树节点值之和的平均值
+        if (node.val == totalSum / totalNodes) {
+            count[0]++;
         }
 
         return new int[]{totalNodes, totalSum};
