@@ -86,6 +86,8 @@ import java.util.Stack;
  * todo:待完成
  */
 class Skiplist {
+    static final double SKIP_PROBABILITY = 0.5;
+
     class Node {
         int val;
         Node next, down;
@@ -99,6 +101,7 @@ class Skiplist {
 
     Node head = new Node(-1, null, null);
     Random rand = new Random();
+    int maxLevel = 0;
 
     public Skiplist() {
 
@@ -106,11 +109,13 @@ class Skiplist {
 
     public boolean search(int target) {
         Node cur = head;
-        while (cur != null) {
+        for (int i = maxLevel; i >= 0; i--) {
             while (cur.next != null && cur.next.val < target) {
                 cur = cur.next;
             }
-            if (cur.next != null && cur.next.val == target) return true;
+            if (cur.next != null && cur.next.val == target) {
+                return true;
+            }
             cur = cur.down;
         }
         return false;
@@ -119,7 +124,7 @@ class Skiplist {
     public void add(int num) {
         Stack<Node> stack = new Stack<>();
         Node cur = head;
-        while (cur != null) {
+        for (int i = maxLevel; i >= 0; i--) {
             while (cur.next != null && cur.next.val < num) {
                 cur = cur.next;
             }
@@ -132,15 +137,18 @@ class Skiplist {
             cur = stack.pop();
             cur.next = new Node(num, cur.next, down);
             down = cur.next;
-            insert = rand.nextDouble() < 0.5;
+            insert = rand.nextDouble() < SKIP_PROBABILITY;
         }
-        if (insert) head = new Node(-1, null, head);
+        if (insert) {
+            head = new Node(-1, null, head);
+            maxLevel++;
+        }
     }
 
     public boolean erase(int num) {
         Node cur = head;
         boolean found = false;
-        while (cur != null) {
+        for (int i = maxLevel; i >= 0; i--) {
             while (cur.next != null && cur.next.val < num) {
                 cur = cur.next;
             }
@@ -153,14 +161,6 @@ class Skiplist {
         return found;
     }
 
-
-    /**
-     * Your Skiplist object will be instantiated and called as such:
-     * Skiplist obj = new Skiplist();
-     * boolean param_1 = obj.search(target);
-     * obj.add(num);
-     * boolean param_3 = obj.erase(num);
-     */
     public static void main(String[] args) {
         Skiplist skiplist = new Skiplist();
         skiplist.add(1);
