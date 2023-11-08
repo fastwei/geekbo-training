@@ -1,5 +1,7 @@
 package com.geekbo.training.leetcode.top150;
 
+import com.geekbo.training.leetcode.list.ListNode;
+
 /**
  * Given the head of a sorted linked list, delete all nodes that have duplicate numbers,
  * leaving only distinct numbers from the original list. Return the linked list sorted as well.

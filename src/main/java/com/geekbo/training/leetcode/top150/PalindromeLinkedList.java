@@ -1,5 +1,7 @@
 package com.geekbo.training.leetcode.top150;
 
+import com.geekbo.training.leetcode.list.ListNode;
+
 /**
  * Given the head of a singly linked list, return true if it is a
  * palindrome

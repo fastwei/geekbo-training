@@ -1,5 +1,7 @@
 package com.geekbo.training.leetcode.top150;
 
+import com.geekbo.training.leetcode.list.ListNode;
+
 /**
  * Given the heads of two singly linked-lists headA and headB,
  * return the node at which the two lists intersect.

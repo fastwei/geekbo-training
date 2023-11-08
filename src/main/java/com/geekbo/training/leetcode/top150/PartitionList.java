@@ -1,5 +1,7 @@
 package com.geekbo.training.leetcode.top150;
 
+import com.geekbo.training.leetcode.list.ListNode;
+
 /**
  *
  * Given the head of a linked list and a value x,
