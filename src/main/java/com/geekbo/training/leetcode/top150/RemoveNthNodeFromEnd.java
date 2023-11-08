@@ -1,6 +1,8 @@
 package com.geekbo.training.leetcode.top150;
 
 
+import com.geekbo.training.leetcode.base.ListNode;
+
 public class RemoveNthNodeFromEnd {
 
     /**

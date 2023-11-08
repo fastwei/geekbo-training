@@ -1,5 +1,7 @@
 package com.geekbo.training.leetcode.list;
 
+import com.geekbo.training.leetcode.base.ListNode;
+
 public class LinkedListRotation {
     // 实现原理：这是一个单链表的右旋转操作。我们首先计算链表的长度，
     // 然后调整旋转值以避免不必要的旋转。接下来，找到新的头部和尾部位置，
