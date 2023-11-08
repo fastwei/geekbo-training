@@ -1,6 +1,6 @@
 package com.geekbo.training.leetcode.top150;
 
-import com.geekbo.training.leetcode.list.ListNode;
+import com.geekbo.training.leetcode.base.ListNode;
 
 /**
  * Given the head of a sorted linked list, delete all nodes that have duplicate numbers,

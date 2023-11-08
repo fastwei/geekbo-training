@@ -1,6 +1,6 @@
 package com.geekbo.training.leetcode.top150;
 
-import com.geekbo.training.leetcode.list.ListNode;
+import com.geekbo.training.leetcode.base.ListNode;
 
 /**
  * Given the heads of two singly linked-lists headA and headB,

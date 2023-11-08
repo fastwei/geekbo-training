@@ -1,7 +1,5 @@
 package com.geekbo.training.leetcode.top150;
 
-import com.geekbo.training.leetcode.list.ListNode;
-
 /**
  *
  * Given the head of a singly linked list and two integers left and right where left <= right,
