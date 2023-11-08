@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.top150;
+package com.geekbo.training.leetcode.list;
 
 import com.geekbo.training.leetcode.base.ListNode;
 

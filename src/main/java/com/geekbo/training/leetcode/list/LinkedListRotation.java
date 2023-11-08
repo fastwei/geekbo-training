@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.top150;
+package com.geekbo.training.leetcode.list;
 
 class ListNode {
     int val;

@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.top150;
+package com.geekbo.training.leetcode.list;
 
 import java.util.HashMap;
 import java.util.Map;
