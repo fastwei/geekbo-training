@@ -76,14 +76,14 @@ public class RectangleArea {
         System.out.println("测试用例1: " + result1); // 预期输出: 45
 
         // 测试用例2
-        int ax1 = -2;
-        int ay1 = -2;
-        int ax2 = 2;
-        int ay2 = 2;
-        int bx1 = -2;
-        int by1 = -2;
-        int bx2 = 2;
-        int by2 = 2;
+        ax1 = -2;
+        ay1 = -2;
+        ax2 = 2;
+        ay2 = 2;
+        bx1 = -2;
+        by1 = -2;
+        bx2 = 2;
+        by2 = 2;
 
         int result2 = computeArea(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2);
         System.out.println("测试用例2: " + result2); // 预期输出: 16
