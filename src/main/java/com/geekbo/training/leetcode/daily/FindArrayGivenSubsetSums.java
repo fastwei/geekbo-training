@@ -58,7 +58,7 @@ public class FindArrayGivenSubsetSums {
      * <p>
      * 综上所述，该算法的时间复杂度为O(nlogn)，空间复杂度为O(n)。
      */
-    public int[] recoverArray(int n, int[] sums) {
+    public static int[] recoverArray(int n, int[] sums) {
         Arrays.sort(sums);
         int m = sums.length;
         int[] res = new int[n];
