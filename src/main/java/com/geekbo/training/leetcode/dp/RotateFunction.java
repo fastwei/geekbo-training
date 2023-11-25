@@ -30,6 +30,46 @@ package com.geekbo.training.leetcode.dp;
  * Output: 0
  */
 public class RotateFunction {
+    /**
+     * 解题思路：
+     * <p>
+     * 首先，计算数组元素的和以及初始的F(0)值，与之前的实现相同。
+     * 使用动态规划的思想，定义一个数组dp，其中dp[k]表示F(k)的值。
+     * 初始化dp[0]为初始的F(0)值。
+     * 遍历计算dp[k]的值，其中k表示数组旋转的次数。
+     * 每次计算dp[k]时，可以通过上一次dp[k-1]的值以及数组元素的和和最后一个元素的值来得到。
+     * 具体计算公式为：dp[k] = dp[k-1] + sum - n * nums[n - k]。
+     * 最后，返回数组dp中的最大值作为结果。
+     *
+     * 复杂度分析：
+     * <p>
+     * 时间复杂度：遍历数组元素的和以及计算dp[k]的值都需要遍历整个数组，所以时间复杂度为O(n)，其中n为数组的长度。
+     * 空间复杂度：除了常数级别的额外空间，需要使用一个大小为n的数组dp，所以空间复杂度为O(n)。
+     *
+     * @param nums
+     * @return
+     */
+    public int maxRotateFunction(int[] nums) {
+        int n = nums.length;
+        int sum = 0;
+        int f = 0;
+
+        // 计算数组元素的和以及初始的F(0)值
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];
+            f += i * nums[i];
+        }
+
+        int maxF = f;
+
+        // 动态规划计算F(k)的值，更新最大值
+        for (int k = 1; k < n; k++) {
+            f = f + sum - n * nums[n - k];
+            maxF = Math.max(maxF, f);
+        }
+
+        return maxF;
+    }
 
     /**
      * 解题思路：
@@ -49,7 +89,7 @@ public class RotateFunction {
      * @param nums
      * @return
      */
-    public int maxRotateFunction(int[] nums) {
+    public int maxRotateFunction2(int[] nums) {
         int n = nums.length;
         int sum = 0;
         int f = 0;
