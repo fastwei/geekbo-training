@@ -44,7 +44,7 @@ public class BSTToGreaterSumTree {
         root.right.right.right = new TreeNode(8);
 
         BSTToGreaterSumTree solution = new BSTToGreaterSumTree();
-        TreeNode result = solution.convertBST(root);
+        TreeNode result = solution.bstToGst(root);
 
         // 验证结果
         assert result.val == 30;
