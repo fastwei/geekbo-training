@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.codinginterview109;
+package com.geekbo.training.leetcode.codeinterview109;
 
 /**
  * 面试题 02.04. 分割链表

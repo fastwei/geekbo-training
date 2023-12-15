@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.codinginterview109;
+package com.geekbo.training.leetcode.codeinterview109;
 
 
 import java.util.Stack;

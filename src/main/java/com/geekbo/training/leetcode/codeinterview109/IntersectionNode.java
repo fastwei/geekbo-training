@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.codinginterview109;
+package com.geekbo.training.leetcode.codeinterview109;
 
 /**
  * 给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。

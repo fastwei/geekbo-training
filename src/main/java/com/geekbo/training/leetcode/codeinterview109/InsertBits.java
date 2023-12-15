@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.codinginterview109;
+package com.geekbo.training.leetcode.codeinterview109;
 
 /**
  * 题目：面试题 05.01. 插入

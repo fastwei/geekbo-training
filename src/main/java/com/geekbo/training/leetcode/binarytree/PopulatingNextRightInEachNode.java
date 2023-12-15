@@ -33,7 +33,7 @@ package com.geekbo.training.leetcode.binarytree;
  * Input: root = []
  * Output: []
  */
-class Solution {
+class PopulatingNextRightInEachNode {
     /**
      * 这个问题的解题思路是使用层序遍历的方式，通过设置 next 指针连接每个节点的右侧节点。
      * <p>

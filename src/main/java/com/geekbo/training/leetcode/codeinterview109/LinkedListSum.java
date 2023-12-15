@@ -1,4 +1,4 @@
-package com.geekbo.training.leetcode.codinginterview109;
+package com.geekbo.training.leetcode.codeinterview109;
 
 /**
  * 给定两个用链表表示的整数，每个节点包含一个数位。
