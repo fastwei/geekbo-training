@@ -1,5 +1,6 @@
 package com.geekbo.training.leetcode.daily;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
@@ -122,15 +123,15 @@ public class BeautifulTowersII {
 
     public static void main(String[] args) {
         // 测试用例
-        List<Integer> maxHeights1 = List.of(5, 3, 4, 1, 1);
+        List<Integer> maxHeights1 = Arrays.asList(5, 3, 4, 1, 1);
         // 预期输出：13
         System.out.println(new BeautifulTowersII().maximumSumOfHeights(maxHeights1));
 
-        List<Integer> maxHeights2 = List.of(6, 5, 3, 9, 2, 7);
+        List<Integer> maxHeights2 = Arrays.asList(6, 5, 3, 9, 2, 7);
         // 预期输出：22
         System.out.println(new BeautifulTowersII().maximumSumOfHeights(maxHeights2));
 
-        List<Integer> maxHeights3 = List.of(3, 2, 5, 5, 2, 3);
+        List<Integer> maxHeights3 = Arrays.asList(3, 2, 5, 5, 2, 3);
         // 预期输出：18
         System.out.println(new BeautifulTowersII().maximumSumOfHeights(maxHeights3));
     }
