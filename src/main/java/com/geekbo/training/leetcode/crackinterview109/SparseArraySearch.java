@@ -23,7 +23,7 @@ package com.geekbo.training.leetcode.crackinterview109;
  */
 public class SparseArraySearch {
 
-    public int findString(String[] words, String s) {
+    public static int findString(String[] words, String s) {
         int left = 0;
         int right = words.length - 1;
         int middle = 0;
