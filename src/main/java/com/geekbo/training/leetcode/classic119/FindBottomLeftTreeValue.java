@@ -1,5 +1,7 @@
 package com.geekbo.training.leetcode.classic119;
 
+import com.geekbo.training.leetcode.base.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
