@@ -45,7 +45,9 @@ class ValidTreeFromGraph {
             }
         }
 
-        return Arrays.stream(visited).allMatch(v -> v) && Arrays.stream(parent).allMatch(p -> p != -1);
+        return false;
+
+        //return Arrays.stream(visited).allMatch(v -> v) && Arrays.stream(parent).allMatch(p -> p != -1);
     }
 
     public boolean validTree(int n, int[][] edges) {
